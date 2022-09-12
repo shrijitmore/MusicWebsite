@@ -6,6 +6,7 @@ let myProgressBar = document.getElementById('myProgressBar');
 let mygif = document.getElementById('gif')
 let songnames = document.getElementById('songnames');
 let songItem = Array.from(document.getElementsByClassName('songItem'));
+let itemSong = Array.from(document.getElementsByClassName('itemSong'));
 let songs = [
     {songName: "Night-Changes - One Direction", filePath: "songs/1.mp3", coverPath:"cover/m1.jpg"},
     {songName: "Floating - Alina Baraz, feat. Khalid", filePath: "songs/2.mp3", coverPath:"cover/m2.jpg"},
@@ -18,17 +19,23 @@ songItem.forEach((element, i)=> {
     element.getElementsByTagName("img")[0].src = songs[i].coverPath;
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
 })
+const play = () => {
+    Play.classList.remove('fa-play-circle');
+    Play.classList.add('fa-pause-circle');
+}
+const pause = () => {
+    Play.classList.remove('fa-pause-circle');
+    Play.classList.add('fa-play-circle');
+}
 // play/pause click
 Play.addEventListener('click',()=>{
     if(audioElement.paused || audioElement.currentTime<=0){
         audioElement.play();
-        Play.classList.remove('fa-play-circle');
-        Play.classList.add('fa-pause-circle');
+        play()
         mygif.style.opacity = 1;
-    }else{
+}else{
         audioElement.pause();
-        Play.classList.remove('fa-pause-circle');
-        Play.classList.add('fa-play-circle');
+        pause()
         mygif.style.opacity = 0;
     }
 })
@@ -52,24 +59,38 @@ Array.from(document.getElementsByClassName("itemSong")).forEach((element)=>{
     element.addEventListener('click',(e)=>{
         makeAllPlays();
         songIndex = parseInt(e.target.id);
+        if(audioElement.paused || audioElement.currentTime<=0){
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
+        play();
         songnames.innerText = songs[songIndex-1].songName;
         audioElement.src = `songs/${songIndex-1}.mp3`;
         audioElement.currentTime = 0;
         audioElement.play();
-        mygif.style.opacity = 1;
-        Play.classList.remove('fa-play-circle');
-        Play.classList.add('fa-pause-circle');
+        }else{
+        e.target.classList.remove('fa-pause-circle');
+        e.target.classList.add('fa-play-circle');
+        pause()
+        songnames.innerText = songs[songIndex-1].songName;
+        audioElement.src = `songs/${songIndex-1}.mp3`;
+        audioElement.currentTime = 0;
+        audioElement.pause();
+        }
     })
 })
+
 document.getElementById('next').addEventListener('click', ()=>{
-    if(songIndex >= 6){
+    if(songIndex >= 5){
         songIndex = 0;
     }
     else{
         songIndex += 1;
     }
+    document.getElementById(`${(songIndex)}`).classList.remove('fa-play-circle');
+    document.getElementById(`${(songIndex)}`).classList.add('fa-pause-circle');
+    document.getElementById(`${Math.abs(songIndex-1)}`).classList.remove('fa-pause-circle');
+    document.getElementById(`${Math.abs(songIndex-1)}`).classList.add('fa-play-circle')
+
     audioElement.src = `songs/${songIndex}.mp3`;
     songnames.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
@@ -85,6 +106,10 @@ document.getElementById('previous').addEventListener('click', ()=>{
     else{
         songIndex -= 1;
     }
+    document.getElementById(`${songIndex}`).classList.remove('fa-play-circle');
+    document.getElementById(`${songIndex}`).classList.add('fa-pause-circle')
+    document.getElementById(`${songIndex+1}`).classList.remove('fa-pause-circle');
+    document.getElementById(`${songIndex+1}`).classList.add('fa-play-circle')
     audioElement.src = `songs/${songIndex}.mp3`;
     songnames.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
