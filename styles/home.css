@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=MuseoModerno&family=Puppies+Play&family=Purple+Purse&family=Ravi+Prakash&display=swap');
+body{
+    width: 100%;
+    height: 100%;
+    background: #07252d;
+}
+
+.Navbar{
+    position: absolute;
+    width: 341px;
+    height: 74px;
+    left:   980px;
+    top: 70px;
+    display: flex;
+}
+.Navbar li{
+    list-style-type: none;
+    padding: 0;
+    margin-left: 40px;
+    width: 179px;
+    height: 74px;
+    font-family: 'MuseoModerno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 64px;
+    text-align: center;
+    color: #FFFFFF;
+}
+#logo{
+    position: absolute;
+    width: 207px;
+    height: 48px;
+    left: 100px;
+    top: 20px;
+}
+img{
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+}
+.logo{
+    font-family: 'Ravi Prakash';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 76px;
+    display: flex; 
+    align-items: center;
+    color: #FFFFFF;
+}
+.Decoration img{
+    width: 650px;
+    height: 650px;
+    left: 1px;
+    position:absolute;
+    top: 140px;
+}
+.Content div{
+    position: relative;
+    left: 780px;
+    top: 200px;
+    font-family: 'Purple Purse';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 160px;
+    color: #FFFFFF;
+}
+.Content p{
+    position: absolute;
+    left: 789px;
+    top: 240px;
+    font-family: 'Puppies Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 96px;
+    color: #FFFFFF;
+}
+.button{
+    position: absolute;
+    left: 793px;
+    top: 400px;
+    
+}
+.button{
+    padding: 15px 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #5da9e8;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.button:hover{
+color: #090909;
+    background-color: #62a5dc;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s ;
+}
+
+.button span{
+position: absolute;
+    display: block;
+}
+.button span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#2196f3);
+}
+.button:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.button span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#4f94cd);
+}
+.button:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.button span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2196f3);
+}
+.button:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.button span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2196f3);
+}
+.button:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+   
+nav li a{
+    color: inherit;
+    text-decoration: none;
+}
+nav li a:hover{
+    color: #2196f3;
+    text-decoration: underline;
+}
+#Ellipse1{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 400px;
+    top: 180px;
+}
+#Ellipse2{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 82%;
+    top: 290px;
+}
+#Ellipse3{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 730px;
+    top: 470px;
+    
+}
+#Ellipse4{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 83.6%;
+    top: 70%;
+}
+
+
+@media screen and (max-width: 992px) {
+    .body{
+        width:min-content;
+        
+    }
+    .Decoration img{
+        width: 650px;
+        height: 650px;
+        
+    }
+    .Navbar{
+        position: relative;
+        width: 341px;
+        height: 74px;
+        left: 0;
+        display: flex;
+    }
+    .Navbar li{
+        list-style-type: none;
+        padding: 0;
+        margin-right: 20px;
+        width: 179px;
+        height: 74px;
+        font-family: 'MuseoModerno';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 64px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    #logo{
+        justify-content: center;
+        display: flex;
+    }
+    #Ellipse1{
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        left: 4px;
+        top: 180px;
+    }
+    #Ellipse2{
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        left: 82%;
+        top: 290px;
+    }
+    #Ellipse3{
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        left: 90px;
+        top: 470px;
+        
+    }
+    #Ellipse4{
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        left: 83.6%;
+        top: 70%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

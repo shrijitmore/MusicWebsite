@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=MuseoModerno&family=Puppies+Play&family=Purple+Purse&family=Ravi+Prakash&display=swap');
+
+body{
+    background: hsl(193, 73%, 10%);
+    background-image: url("/images/Backgroundb.png");
+    background-repeat: no-repeat;
+}
+.Navbar{
+    margin-top: 50px;
+    display: flex;
+    list-style-type: none;
+    font-family: 'MuseoModerno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 64px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.Navbar li{
+    margin-left: 30px;
+}
+.Navbar li a{
+    color: inherit;
+    text-decoration: underline;
+}
+.Navbar li a:hover{
+    color: #2196f3;
+    text-decoration: underline;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;
+    gap: 10%;
+}
+
+.Text1{
+    font-family: 'MuseoModerno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 30px;
+    margin-top: 90px;
+    flex-direction: column;
+    flex-wrap: wrap ;
+}
+.t1{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 15px 15px black;
+}
+.t2{
+    font-size: 60px;
+}
+.t2 h1{
+    color: #FCABAB;
+    margin-top: 0px;
+    text-shadow: 15px 15px black;
+}
+
+.container{
+    display: flex;
+    margin-left: 70px;
+    margin-right: 70px;
+    justify-content: center;
+    width: 600px;
+    height: 550px;
+    background: #3A3434;
+    border-radius: 38px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.input{
+    width: 75%;
+    height: 60%;
+    font-size: 22px;
+    margin-top: 40px;
+    color: aliceblue;
+    font-family: 'MuseoModerno';
+}
+.input input{
+    margin-bottom: 40px;
+}
+input{
+    font-size: medium;
+    color: white;
+    font-family: 'MuseoModerno';
+    margin-top: 10px;
+    background-color: inherit;
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #65BEBE;
+    border-radius: 18px;
+  }
+  .button{
+   position: relative;
+}
+.button{
+    margin-left: 50%;
+    padding: 15px 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #5da9e8;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.button:hover{
+color: #090909;
+    background-color: #62a5dc;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s ;
+}
+
+.button span{
+    position: absolute;
+    display: block;
+}
+.button span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#2196f3);
+}
+.button:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.button span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#4f94cd);
+}
+.button:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.button span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2196f3);
+}
+.button:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.button span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2196f3);
+}
+.button:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+footer{
+    display: flex;
+    background: #111;
+    width: 100%;
+    height: 120px;
+    color: #fff;
+    margin-top: 30px;
+}
+.footer-content{
+    display: flex;
+    margin-left: 150px;
+    flex-wrap: wrap;
+}
+.footer-content h1{
+    margin-left: 40px;
+}
+.footermedia{
+    display: flex;
+    margin-left: 17px;
+    justify-content: end;
+    width: 60rem;
+}
+.footermedia h1{
+    font-size: 20px;
+    margin-top: 32px;
+    margin-left: 14px;
+    margin-right: 12px ;
+}
+.footermedia h1 a:link{
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 992px){
+    .container{
+        display: flex;
+        margin-left: 0px;
+        margin-right: 0px;
+        justify-content: center;
+        width: 600px;
+        height: 550px;
+        background: #3A3434;
+        border-radius: 38px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        background: #111;
+        width: 100%;
+        height: 200px;
+        color: #fff;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .footer-content{
+        display: flex;
+        margin-left: 15px;
+        flex-wrap: wrap;
+    }
+    .footermedia{
+        width: 100%;
+        display: flex;
+        margin-left: 17px;
+        justify-content: center;
+    }
+}
+
